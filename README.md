@@ -53,9 +53,9 @@
 - small => Objects that have an area; < 32^2
 - medium => Objects that have an area; (32^2 < area < 96^2)
 - large => Objects that have an area; (area > 96^2)
-- uncertain => a) All Objects which have an area < 8^2. b) Objects ["traffic-sign", "traffic-light", "person", "bike", "rider", "motor"] which have an area > 512^2. Note that, the meaning of `uncertain` here is not that the ground truth labels might be wrong but the also model predictions with respect to such objects might be wrong, given how pixalated these crops could be and hence, can be considered as `uncertain`.
+- uncertain => a) All Objects which have an area < 8^2. b) Objects ["traffic-sign", "traffic-light", "person", "bike", "rider", "motor"] which have an area > 512^2. Note that, the meaning of `uncertain` here is not that the ground truth labels might be wrong but also the model predictions with respect to such objects might be wrong, given how pixelated these crops could be and hence, can be considered as `uncertain`.
 
-Why these 4 additional attributes are created? -> They are created to understand how model performs across objects that are very small (uncertain), small, medium, large.
+Why these additional attributes are created? -> They are created to understand how model performs across objects that are very small (uncertain), small, medium, large.
 
 - The following dataframe for both, train and val is created where each row provides information about the single object. Thus, a filename having 4 objects -> 4 rows with same filename, each for per object or bbox. 
 - Note, for a given filename, there can be no labels at all, duplicate labels, overlapped boxes for same obejct -> These all edge-cases are filtered out.
@@ -93,7 +93,7 @@ Containers with name "bdd100k_stats_app" and bdd100k_dataviz_app" respectively f
 
 </br>
 
-[Recommended] Build and Run
+[Recommended] Run
 
 ```
 cd docker
@@ -106,7 +106,7 @@ docker compose up -d
 cd docker
 docker compose up -d --build
 ```
-#### Note Build and Tested the docker image on Linux System!
+#### Note; Build and Tested the docker image on Linux System!
 
 </br>
 </br>
