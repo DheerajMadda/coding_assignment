@@ -1,6 +1,4 @@
-![bosch_logo](https://github.com/user-attachments/assets/50202174-1ce6-4957-a25f-5c687bbbb51f)
-
-# <p align="center"><strong> Applied Computer Vision Coding Assignment</strong></p>
+# <p align="center"><strong>Coding Assignment</strong></p>
 ### <p align="center">Version: 1.1.2</p>
 
 ### Repository Structure
