@@ -61,7 +61,7 @@ Why these 4 additional attributes are created? -> They are created to understand
 - Note, for a given filename, there can be no labels at all, duplicate labels, overlapped boxes for same obejct -> These all edge-cases are filtered out.
 - The dataframe looks like the following
 </br>
-<img width="1638" height="394" alt="image" src="https://github.com/user-attachments/assets/fa7c8135-32d0-4fe1-ae6b-080922cc17c9" />
+<img width="1638" height="394" alt="image" src="https://github.com/user-attachments/assets/c2246d16-3537-4e1f-b014-1f111d854c14" />
 
 </br>
 </br>
@@ -172,7 +172,7 @@ This paper replaces various modules of original YOLOv8 with various light-weight
 
 #### Model Architecture
 
-<img width="1301" height="705" alt="image" src="https://github.com/user-attachments/assets/35db3b7b-1cd3-4ff7-8c0b-227ebd35e22b" />
+<img width="1301" height="705" alt="image" src="https://github.com/user-attachments/assets/07f499c7-4d68-468e-833b-b821cdb2b571" />
 
 **Blocks**
 - *GhostConv:* CBS -> x - > Concat(x, CBS(x))
@@ -221,7 +221,7 @@ Note: c) **Head Block** is a Standard Yolov8 Head Block with 3 decoupled BBox Co
 Following model comparisons are of model variant/size - "m"; Batch size = 16 on RTX 3060
 </br>
 
-<img width="1475" height="189" alt="image" src="https://github.com/user-attachments/assets/f22e7631-844e-4a03-8441-6a7eff5d8078" />
+<img width="1475" height="189" alt="image" src="https://github.com/user-attachments/assets/76a1db41-973b-4669-8c1f-1585ae46f8f1" />
 
 </br>
 
@@ -329,14 +329,14 @@ with torch.inference_mode():
 Considering the "All" attribute -> meaning all class-wise crops across entire dataset; please find below the dataset distribution (from Task 1) and metric plots for both mAP and ZRR.
 <br/>
 <br/>
-<img width="720" height="620" alt="image" src="https://github.com/user-attachments/assets/2a630b3d-8a5c-4155-86f8-ce93a49b4d3c" />
+<img width="720" height="620" alt="image" src="https://github.com/user-attachments/assets/6692e480-3a83-41fe-9652-8c39333486d1" />
 <br/>
-<img width="1187" height="589" alt="image" src="https://github.com/user-attachments/assets/98e49ca8-73f2-41f2-a612-e42746ca6ea7" />
+<img width="1187" height="589" alt="image" src="https://github.com/user-attachments/assets/ad098f23-24fd-413e-9a21-a1d80988e603" />
 <br/>
-<img width="1196" height="561" alt="image" src="https://github.com/user-attachments/assets/a7197e75-4388-42b7-ae1b-54bbfbfb7438" />
+<img width="1196" height="561" alt="image" src="https://github.com/user-attachments/assets/fdf61b00-ae19-4923-a8cb-e22f606580aa" />
 <br/>
 <br/>
-<img width="1378" height="161" alt="image" src="https://github.com/user-attachments/assets/8ea4f36b-144d-41a4-a099-15b3d83d9011" />
+<img width="1378" height="161" alt="image" src="https://github.com/user-attachments/assets/afeefd78-7e26-4830-bd01-ce9ab161e05a" />
 <br/>
 
 Insights derived from above plots:
@@ -378,9 +378,9 @@ Extremely rare class with practically no samples in the dataset. Shows low mAP (
 Similarly, for the "Uncertain" attribute -> please find below the dataset distribution (from Task 1) and metric plots for mAP .
 <br/>
 <br/>
-<img width="1346" height="563" alt="image" src="https://github.com/user-attachments/assets/c6a16070-c655-45f6-b3f9-156f93b62041" />
+<img width="1346" height="563" alt="image" src="https://github.com/user-attachments/assets/ec371e24-5e8a-4dc3-9a26-82c39ba8a236" />
 <br/>
-<img width="1343" height="650" alt="image" src="https://github.com/user-attachments/assets/f15a83f4-a934-4c82-8aab-7c3d639dc27f" />
+<img width="1343" height="650" alt="image" src="https://github.com/user-attachments/assets/2524dfe2-8dd6-4905-bf99-a87df4b711ba" />
 <br/>
 
 <br/>
