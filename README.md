@@ -253,7 +253,7 @@ With respect to the above comparisons, selecting the **Implemented YOLOv8I model
 from model import YoloV8I, YoloV8I_CONFIGS
 from postprocess import PostProcess, draw_detections
 
-DEVICE = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
 # Model
 model_type = "m"
@@ -264,7 +264,7 @@ model = YoloV8I(model_config)
 
 ckpt_path = os.path.join("experiments", "bdd100k", "yolov8I-m_E48_L2.9727_VL3.0520.pth")
 model.load_state_dict(torch.load(ckpt_path))
-model.eval().to(DEVICE)
+model.eval().to(device)
 
 # Post Process
 postprocess = PostProcess(
