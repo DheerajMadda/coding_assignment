@@ -1,0 +1,16 @@
+# Tested with Python Version: 3.9.0
+albumentations==2.0.8
+opencv-python==4.6.0.66
+matplotlib==3.6.0
+ml-collections==0.1.1
+numpy==1.25.2
+pandas==2.3.2
+scipy==1.8.1
+streamlit==1.49.1
+supervision==0.3.1
+thop==0.1.1.post2209072238
+torch==2.5.1+cu118
+torchmetrics==0.11.0
+torchvision==0.20.1+cu118
+tqdm==4.64.1
+ultralytics==8.3.192
