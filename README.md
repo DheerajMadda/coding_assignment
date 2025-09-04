@@ -247,6 +247,53 @@ With respect to the above comparisons, selecting the **Implemented YOLOv8I model
 </br>
 </br>
 
+#### How to run the Model for Inference
+
+```
+from model import YoloV8I, YoloV8I_CONFIGS
+from postprocess import PostProcess, draw_detections
+
+DEVICE = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+
+# Model
+model_type = "m"
+model_config = YoloV8I_CONFIGS[model_type]
+model_config.num_classes = NUM_CLASSES
+
+model = YoloV8I(model_config)
+
+ckpt_path = os.path.join("experiments", "bdd100k", "yolov8I-m_E48_L2.9727_VL3.0520.pth")
+model.load_state_dict(torch.load(ckpt_path))
+model.eval().to(DEVICE)
+
+# Post Process
+postprocess = PostProcess(
+    image_height=IMAGE_HEIGHT,
+    image_width=IMAGE_WIDTH,
+    conf_thres=0.3,
+    iou_thres=0.3
+)
+
+# Assuming you have inputs: torch.Tensor of shape (Batch_Size, 3, 480, 640) and LABEL_MAP: dict (key|class_id: value|class_name)
+inputs = inputs.to(device)
+with torch.inference_mode():
+    preds, _ = model(inputs)
+    boxes, scores, class_ids = postprocess(preds)
+    if len(boxes) != 0: # No detections!
+        out_image = draw_detections(image, boxes, scores, class_ids, LABEL_MAP)
+        plt.imshow(out_image)
+
+```
+#### For more info; please refer the end of the "notebooks/Task_2c_Training.ipynb"
+
+</br>
+
+#### Sample Model Inference Output
+<img width="758" height="558" alt="image" src="https://github.com/user-attachments/assets/a89b5648-d2ca-467e-8e54-d1612aecfbd5" />
+
+</br>
+</br>
+
 <hr>
 
 # <p align="center"><strong>Task 3 - Evaluation and Analysis</strong></p>
