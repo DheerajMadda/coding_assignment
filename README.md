@@ -152,7 +152,7 @@ docker compose up -d --build
 
 #### Model Selection
 - There are various pretrained models trained on BDD100K Dataset which can be found at [here](https://github.com/SysCV/bdd100k-models/tree/main/det)
-- All these models are 2-Stage Detectors where ConvNext models have the highest validation metrics.
+- All these models are 2-Stage Detectors which have good validation metrics.
 - These 2-Stage Detectors requires more computational cost for Training and have higher latencies than 1-Stage Detectors.
 - Note that, selection of a Detection Model falls mainly under 2 following requirements; </br>
   -> 1) Model to be used in the Data/Annotation pipeline where we can afford to use heavy models having higher latencies and better performance. </br>
