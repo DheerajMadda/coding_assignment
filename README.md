@@ -211,7 +211,7 @@ This paper replaces various modules of original YOLOv8 with various light-weight
 Note, that in the above architecture diagram (from the paper), 2 Downsamples blocks are missing which are used to downsample the resolution of feature maps! CBS is used as a Downsampling Block with stride=2.
 </br>
 
-Note: c) **Head Block** is a Standard Yolov8 Head Block with 3 decoupled BBox Conv Blocks and Classification Conv Blocks 
+Note: c) **Head Block** is a Standard Yolov8 Head Block with 3 decoupled BBox Conv Blocks and Classification Conv Blocks. But made some changes to its definition, re-structured it for better readability and removed inference time computations of anchors and strides, and added computations at initialization time using PyTorch's register_buffers.
 
 </br>
 </br>
