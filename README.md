@@ -108,6 +108,14 @@ docker compose up -d --build
 ```
 #### Note; Build and Tested the docker image on Linux System!
 
+Please find below the UI example for FiftyOne app:
+</br>
+
+<img width="2000" height="1000" alt="image" src="https://github.com/user-attachments/assets/e5ea2af5-4b76-4274-8457-38bbc7a092cf" />
+
+</br>
+Note, from the FiftyOne UI, under "Detections" -> you can filter by `label` and filter by `tags`
+
 </br>
 </br>
 
