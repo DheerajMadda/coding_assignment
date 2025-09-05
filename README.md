@@ -118,7 +118,7 @@ docker compose up -d --build
 ### [Notebooks]
 - *notebooks/Task_2a_Training_Prerequisite.ipynb* -> A jupyter notebook that computes Mean and Std of the dataset and saves labels in the format that is efficient for training the model. </br>
 - *notebooks/Task_2b_Model_Profiling.ipynb* -> A jupyter notebook performs model profiling. </br>
-- *notebooks/Task_2c_Model_Training.ipynb* -> A jupyter notebook that trains the model and save at experiments directory. </br>
+- *notebooks/Task_2c_Training.ipynb* -> A jupyter notebook that trains the model and save at experiments directory. </br>
 
 ### [Scripts]
 #### Modeling
