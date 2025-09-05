@@ -381,6 +381,24 @@ Similarly, for the "Uncertain" attribute -> please find below the dataset distri
 <br/>
 <img width="1343" height="650" alt="image" src="https://github.com/user-attachments/assets/2524dfe2-8dd6-4905-bf99-a87df4b711ba" />
 <br/>
+<br/>
+
+If we take a look at the following mAP@50 scores across the attributes ["all", "occluded", "truncated", "small", "medium", "large", "uncertain"] which we defined in Task 1;
+
+```
+[all] mAP@50 = 0.4114922881126404
+[occluded] mAP@50 = 0.21092724800109863
+[truncated] mAP@50 = 0.24004940688610077
+[small] mAP@50 = 0.095250204205513
+[medium] mAP@50 = 0.35268279910087585
+[large] mAP@50 = 0.6897674798965454
+[uncertain] mAP@50 = 0.0
+```
+
+It is clear that, the model is performing best to worst in the order => ["large", "medium", "truncated", "occluded", "small", "uncertain"]. Note "all" considers all these attributes.
+- This performance makes sense with respect to the dataset distribution and analysis done in Task 1.
+
+Note, the "notebooks/Task_3_Evaluation.ipynb" has the average and class-wise mAP and ZRR metrics across the validation dataset and across in detail.
 
 <br/>
 <br/>
