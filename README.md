@@ -310,7 +310,7 @@ with torch.inference_mode():
 - ZRR e.g a) for an image containing objects of various classes, if model detected no objects at all; then ZRR = 1. <br/>
    b) for an image containing 2 objects of 2 classes each (total 4 objects); <br/>
    b.1) if model detected only 2 objects of class_A then; ZRR|Class_A = 0, ZRR|Class_B = 1 <br/>
-   b.2) if model detected only 1 object of each classes then; ZRR|Class_A = 0, ZRR|Class_B = 0
+   b.2) if model detected only 1 object of each classes then; ZRR|Class_A = 1, ZRR|Class_B = 1
 - ZRR metric is a performance metric that tells us that out of the dataset, for how many samples and classes the model is not able to detect objects.
 - This can be used to backtrack to images and helps in finding out any anomolies in the image/ scene which helps in understanding why and where the model is failing!
 - Computed mAP and ZRR across all classes and class-wise too.
