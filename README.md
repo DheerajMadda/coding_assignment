@@ -299,8 +299,7 @@ with torch.inference_mode():
 # <p align="center"><strong>Task 3 - Evaluation and Analysis</strong></p>
  
 ### [Notebooks]
-- *notebooks/Task_3a_Evaluation.ipynb* -> A jupyter notebook computes metrics for evaluation. </br>
-- *notebooks/Task_3a_Evaluation_analysis.ipynb* -> A jupyter notebook that performs analysis of the evaluation results. </br>
+- *notebooks/Task_3_Evaluation.ipynb* -> A jupyter notebook computes metrics for evaluation. </br>
 
 </br>
 
