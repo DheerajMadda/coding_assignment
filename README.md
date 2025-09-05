@@ -397,6 +397,13 @@ If we take a look at the following mAP@50 scores across the attributes ["all", "
 
 It is clear that, the model is performing best to worst in the order => ["large", "medium", "truncated", "occluded", "small", "uncertain"]. Note "all" considers all these attributes.
 - This performance makes sense with respect to the dataset distribution and analysis done in Task 1.
+- It is obvious that the "uncertain" would perform bad given that these crops fall under the bbox area < 8^2 pixels. Many Cars fall in this range!
+- Objects that are "small" (bbox area < 32^2 pixels) is also performing not good.
+- Typically, both "small" and "uncertain" categories are difficult for the model and obtaining good mAP score on these is quite challenging.
+- Objects that are "medium" and "large" are performing good and this was already analyzed even before training via the Task 1 analysis.
+- "Occluded" objects have slightly lesser mAP score than "truncated" -> Makes sense, as truncated objects typically have 30% of the area visible at the edges and these are normally rarely occluded. "Occluded" objects is also a challenging task but model seems to be working good as we have good distribution of labels under this category.
+
+<br/>
 
 Note, the "notebooks/Task_3_Evaluation.ipynb" has the average and class-wise mAP and ZRR metrics across the validation dataset and across in detail.
 
