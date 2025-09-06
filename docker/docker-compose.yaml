@@ -12,7 +12,7 @@ services:
     build:
       context: ./task_1_viz
       dockerfile: Dockerfile
-    image: dheerajmadda/dd100k_dataviz:latest
+    image: dheerajmadda/bdd100k_dataviz:latest
     container_name: bdd100k_dataviz_app
     ports:
       - "5151:5151"
